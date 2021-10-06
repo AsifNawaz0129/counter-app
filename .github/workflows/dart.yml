@@ -39,4 +39,4 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: ./.github/workflows/emulator_script.sh
+        script: flutter test integration_test
