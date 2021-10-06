@@ -39,4 +39,4 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart
+        script: flutter doctor --android-licenses; flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart
