@@ -36,7 +36,7 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: |
+        run: |
           set -x
           adb device
           flutter test integration_test
