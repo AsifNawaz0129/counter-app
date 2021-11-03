@@ -19,7 +19,6 @@ jobs:
       matrix:
         api-level: [28]
         target: [google_apis]
-        arch: x86
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
