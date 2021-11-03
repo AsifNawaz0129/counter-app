@@ -37,8 +37,7 @@ jobs:
       with:
         api-level: ${{ matrix.api-level }}
         target: ${{ matrix.target }}
-        arch: x86_64
-        profile: Nexus 6
+        arch: x86
+        profile: Nexus 5
         script: |
-          avdmanager list
           flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart
