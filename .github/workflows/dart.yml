@@ -17,8 +17,9 @@ jobs:
     strategy:
       #set of different configurations of the virtual environment.
       matrix:
-        api-level: [29]
-        target: [default]
+        api-level: [28]
+        target: [google_apis]
+        arch: x86
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
@@ -39,4 +40,6 @@ jobs:
         target: ${{ matrix.target }}
         arch: x86_64
         profile: Nexus 6
-        script: flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart
+        script: |
+          avdmanager list
+          flutter drive --driver=test_driver/integration_test.dart --target=integration_test/app_test.dart
